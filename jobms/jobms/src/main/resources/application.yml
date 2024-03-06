@@ -1,0 +1,36 @@
+
+
+spring:
+#    datasource:
+##        driverClassName: org.h2.Driver
+##        password: password
+##        url: jdbc:h2:mem:testdb
+##        username: sa
+#    jpa:
+#        h2
+#        database-platform: org.hibernate.dialect.H2Dialect
+#        show-sql: true
+#        hibernate:
+#            ddl-auto: update
+#       PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobapp
+    username: root
+    password: root
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: job-app-ms
+server:
+    port: 8082
+
+
+
+
+
+

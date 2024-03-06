@@ -1,0 +1,21 @@
+./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=shriharibinwade/jobAppimage"  
+
+docker logout  
+
+docker login 
+
+docker push shriharibinwade/jobappimg   
+
+docker images  
+
+docker rm -f db pgadmin  
+
+docker network create my-network 
+
+docker run -d --name db --network my-network -e POSTGRES_PASSWORD=root postgres  
+
+docker run -d --name pgadmin --network my-network -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=root dpage/pgadmin4
+
+docker ps 
+
+docker exec -it pgadmin ping db  

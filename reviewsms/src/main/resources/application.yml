@@ -1,0 +1,35 @@
+
+
+spring:
+#    datasource:
+#        driverClassName: org.h2.Driver
+#        password: password
+#        url: jdbc:h2:mem:testdb
+#        username: sa
+#    jpa:
+#        database-platform: org.hibernate.dialect.H2Dialect
+#        show-sql: true
+#        hibernate:
+#            ddl-auto: update
+
+    datasource:
+        url: jdbc:postgresql://localhost:5432/jobapp
+        username: root
+        password: root
+
+    jpa:
+        database: POSTGRESQL
+        show-sql: true
+        hibernate:
+            ddl-auto: create-drop
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+    application:
+        name: review-app-ms
+server:
+    port: 8084
+
+
+
+
+
+
